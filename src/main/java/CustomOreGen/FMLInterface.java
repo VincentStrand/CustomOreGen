@@ -34,7 +34,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid="CustomOreGen", useMetadata=true)
+@Mod(modid="customoregen_bopnetherfix", useMetadata=true)
 public class FMLInterface implements IWorldGenerator
 {
     @Instance("CustomOreGen")

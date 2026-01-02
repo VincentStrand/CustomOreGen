@@ -1,23 +1,28 @@
-.classpath
-.DS_STORE
-.gradle/
-.project
-.settings
+# mac os
+.DS_Store
+
+# forge / gradle
+.gradle
 build/
+out/
+classes/
+run/
+
+# eclipse 
+*.launch
+.settings
+.classpath
+.project
+eclipse
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
 bin/
-CREDITS-fml.txt
-eclipse/
-forge-*-changelog.txt
-LICENSE-fml.txt
-MinecraftForge-Credits.txt
-MinecraftForge-License.txt
-README.txt
-*~
-/tmp/
-/config/
-/lib/
-/logs/
-/game/
-/changelog.txt
-/*.launch
-/run
+.classpath

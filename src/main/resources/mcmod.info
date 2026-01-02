@@ -1,14 +1,14 @@
 {
   "modListVersion": 2,
   "modList": [{
-      "modid": "CustomOreGen",
-      "name": "Custom Ore Generation",
+      "modid": "customoregen_bopnetherfix",
+      "name": "Custom Ore Generation (BOP Nether Fix)",
       "version": "$version",
       "mcversion": "$mcversion",
-      "description": "Allows the player to customize how ore is generated.",
+      "description": "Allows the player to customize how ore is generated. ChunkProviderBOPHell fix by finderfilms56.",
       "url": "http://www.minecraftforum.net/topic/1935710-162forge-custom-ore-generation-first-revival/",
-      "authorList": ["JRoush", "noogenesis"],
+      "authorList": ["JRoush", "noogenesis", "finderfilms56"],
       "credits": "Thanks to marcopolo1613, Cadde, mossman1223.",
-      "logoFile": "/Logo.png"
+      "logoFile": "Logo.png"
   }]
 }
