@@ -319,27 +319,18 @@ public class WorldConfig
 
         return -1;
     }
-    private static boolean isNetherChunkProvider(IChunkProvider provider)
-    {
-        // Vanilla Nether
-        if (provider instanceof ChunkProviderHell)
-        {
-            return true;
-        }
 
-        // Biomes O' Plenty Nether (via reflection)
-        try
-        {
-            Class<?> bopHell =
-                    Class.forName("biomesoplenty.common.world.BOPChunkProviderNether");
-            return bopHell.isInstance(provider);
-        }
-        catch (Throwable t)
-        {
-            // BOP not installed or class not present
+    private static boolean isChunkProviderBOPHell(Object chunkProvider) {
+        try {
+            // Check if the class exists and is assignable
+            Class<?> bopClass = Class.forName("biomesoplenty.common.world.ChunkProviderBOPHell");
+            return bopClass.isInstance(chunkProvider);
+        } catch (ClassNotFoundException e) {
+            // BOP not present, ignore
             return false;
         }
     }
+
     private static void populateWorldProperties(Map<String,Object> properties, World world, WorldInfo worldInfo)
     {
         properties.put("world", worldInfo == null ? "" : worldInfo.getWorldName());
@@ -369,7 +360,7 @@ public class WorldConfig
             {
                 genClass = "ChunkProviderFlat";
             }
-            else if (isNetherChunkProvider(chunkProvider))
+            else if (chunkProvider instanceof ChunkProviderHell || isChunkProviderBOPHell(chunkProvider))
             {
                 genClass = "ChunkProviderHell";
             }

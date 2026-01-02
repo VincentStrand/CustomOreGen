@@ -37,7 +37,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @Mod(modid="customoregen_bopnetherfix", useMetadata=true)
 public class FMLInterface implements IWorldGenerator
 {
-    @Instance("CustomOreGen")
+    @Instance("customoregen_bopnetherfix")
     public static FMLInterface instance;
     private Object _worldCreationGui = null;
     @EventHandler
